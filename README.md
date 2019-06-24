@@ -22,7 +22,7 @@
 ```
 
 
-1. Run the web app
+3. Run the web app
 
 ```bash 
     npm start
