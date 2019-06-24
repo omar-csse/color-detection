@@ -1,0 +1,8 @@
+* {
+    justify-content: center
+}
+
+canvas {
+    background: rgb(125, 125, 125);
+    border-radius: 50%;
+}

@@ -1,0 +1,41 @@
+doctype html
+html(lang="en")
+    head
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        meta(charset='utf-8')
+
+        link(rel="shortcut icon" href="#")
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js')
+        link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous")
+        link(rel='stylesheet', type='text/css', href='../css/main.css')
+        script(src='../js/main.js')
+        title Home | Color Prediction
+
+    body.text-center
+        h1.pt-3.my-4.main-header Color Prediction
+        h3 Expected Outcome:
+            div.row
+                h3(style='color:green') green &nbsp
+                h3(style='color:pink') pink &nbsp
+                h3(style='color:orange') orange &nbsp
+                h3(style='color:blue') blue &nbsp
+                h3(style='color:brown') brown &nbsp
+                h3(style='color:red') red &nbsp
+                h3(style='color:yellow') yellow &nbsp
+                h3(style='color:purple') purple &nbsp
+                h3(style='color:grey') grey &nbsp
+        canvas#colored-circle.mt-4(width='250', height='250')
+        div.RGB.mt-4.row
+            div.row
+                div.col
+                    input#R.slider(type='range' min='0' max='255' value='125')
+                    div#Rvalue(for='R') 125
+                div.col
+                    input#G.slider(type='range' min='0' max='255' value='125')
+                    div#Gvalue(for='G') 125
+                div.col    
+                    input#B.slider(type='range' min='0' max='255' value='125')
+                    div#Bvalue(for='B') 125
+        div.row.mt-4
+            h2 Prediction: &nbsp
+            h2#prediction
